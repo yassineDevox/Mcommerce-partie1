@@ -120,4 +120,9 @@ public class ProductController {
         return resp;
     }
 
+    @GetMapping(value = "/test/listProduitTrierParNom")
+    public List<Product> trierProduitsParOrdreAlphabetique(){
+        return this.productDao.findByOrderByNomAsc();
+    }
+
 }
